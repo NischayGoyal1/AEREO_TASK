@@ -1,0 +1,88 @@
+.nav {
+
+    height: 15%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(70, 70, 70);
+    padding: 2px 15px;
+    z-index: 1000;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.searchbar {
+  position: relative;
+  display: inline-block;
+}
+
+.searchbar input[type="text"] {
+  padding: 8px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.searchbar button {
+  background-color: black;
+  padding: 8px 12px;
+  
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.searchbar button:hover{
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/* Styles for the dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  color: black;
+  background-color: #ccc;
+  left: 0;
+  width: 310px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f4f4f4;
+}
+
+/* MapCSS */
+
+.leaflet-container{
+    height: 85%;
+    width: 100%;
+}
+
+/*  */
+
+.leaflet-marker-icon {
+  background-image: url('./components/Marker.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 38px !important; /* Adjust width as needed */
+  height: 38px !important; /* Adjust height as needed */
+  margin-left: -19px !important; /* Adjust margin as needed */
+  margin-top: -19px !important; /* Adjust margin as needed */
+}
