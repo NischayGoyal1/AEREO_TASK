@@ -7,6 +7,7 @@ export const FetchAPI=createAsyncThunk("FetchAPI", async()=>{
     }
     catch(error){
         console.log("Error", error);
+        throw error;
     }
 
 })
@@ -29,6 +30,7 @@ const MovieSlice=createSlice({
             state.isLoading=false;
             state.data=action.payload;
         }).addCase(FetchAPI.rejected,(state)=>{
+            state.isLoading=false;
             state.isError=true;
         })
     },reducers:{
